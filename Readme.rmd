@@ -1,0 +1,58 @@
+---
+title: "Readme"
+author: "Murali"
+date: "25 July 2015"
+output: html_document
+---
+
+
+### Explanation of the "run_analysis" script
+
+#### Loading all packages
+1. Install and load(use library function) all the necessary packages - dplyr, reshape2, etc.The installation and the loading is not shown in the script.
+
+#### Working directory
+1. Set the working directory appropriately to extract and work on the course project folder.
+
+#### Reading all files
+1. Read all the necessary files from the course project folder - test and train X, Y and Subject.
+2. Name the files appropriately.
+
+#### Giving meaningful names to the columns in the dataset
+
+1. The names of the fields in the datasets are in the "features" file.
+2. Extract the names of all the 563 fields from the "features"" file into a new dataframe.
+3. In the above extracted data frame the names of the required fields are in rows.
+4. Transpose the above data frame to get the names of the field into columns
+5. Set the names of test and train "X" datasets correctly from the above dataframe.
+6. Name the test and train "Y" datasets' columns to be "activity" as it represents activity.
+7. Name the test and train "subject" datasets' columns to be "subject" as it represents subject.
+
+#### Givig descriptive activity names to the activity field
+1. The "activity label" file states what the numeric value in the "activity" column means. 
+   1: WALKING
+   2: WALKING_UPSTAIRS
+   3: WALKING_DOWNSTAIRS
+   4: SITTING
+   5: STANDING
+   6: LAYING
+
+2. Change the numeric values of the activity field to what they represent in the test dataset.
+3. Change the numeric values of the activity field to what they represent in the train dataset
+
+#### Combine and merge data sets
+1. Combine test data sets "X", "Y" and "subject" using cbind as we are combining columns
+2. Combine train data sets "X", "Y" and "subject" using cbind as we are combining columns
+3. Merge the test and train datasets to create one datasetusing rbind as we are merging rows.
+
+#### Extract only mean and standard deviation
+1. Make the column names of the merged data set to be unique
+2. Extract only the columns which are mean and std for all the subjects and activities
+
+#### Tidy dataset
+1. Melt and dcast the above data frame to create tidy data set
+2. This exercise helps in getting mean values for each subject each activity combination
+
+#### Tidy data file
+1. Write the tidy data into a text file as per the project instructions.
+
